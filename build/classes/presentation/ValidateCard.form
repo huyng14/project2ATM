@@ -64,11 +64,7 @@
                               <Component id="pnlPanel2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
                               <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-=======
-                              <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                               <Component id="pnlButton456" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -78,11 +74,7 @@
                       <Component id="pnlButton123" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-<<<<<<< HEAD
               <EmptySpace pref="7" max="32767" attributes="0"/>
-=======
-              <EmptySpace pref="10" max="32767" attributes="0"/>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
               <Component id="pnlPanel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="pnlPanel4" min="-2" max="-2" attributes="0"/>
@@ -266,11 +258,7 @@
                           <Component id="lblAuthen1" min="-2" pref="29" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblAuthen2" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
                           <EmptySpace pref="249" max="32767" attributes="0"/>
-=======
-                          <EmptySpace pref="255" max="32767" attributes="0"/>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -457,12 +445,8 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
                       <Component id="jBtn8" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-=======
-                      <Group type="102" alignment="0" attributes="0">
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jBtn1" min="-2" max="-2" attributes="0"/>
@@ -472,16 +456,6 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-=======
-                              <Group type="102" attributes="0">
-                                  <Component id="jBtn2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jBtn3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jBtn13" min="-2" max="-2" attributes="0"/>
-                              </Group>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jBtn5" min="-2" max="-2" attributes="0"/>
@@ -503,7 +477,6 @@
                                       <Component id="jBtn12" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-<<<<<<< HEAD
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jBtn2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -521,13 +494,6 @@
                       <Component id="lblCardHole" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-=======
-                          </Group>
-                      </Group>
-                      <Component id="jBtn8" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="76" max="32767" attributes="0"/>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
               </Group>
           </Group>
         </DimensionLayout>
@@ -535,7 +501,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
@@ -549,33 +514,20 @@
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Component id="btnInsertCard" min="-2" max="-2" attributes="0"/>
-=======
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="jBtn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jBtn13" alignment="3" min="-2" max="-2" attributes="0"/>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBtn1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-<<<<<<< HEAD
                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-=======
-                          <EmptySpace max="-2" attributes="0"/>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBtn4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn7" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn14" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-<<<<<<< HEAD
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-=======
-                          <EmptySpace max="-2" attributes="0"/>
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBtn8" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn9" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -852,7 +804,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn15ActionPerformed"/>
           </Events>
         </Component>
-<<<<<<< HEAD
         <Component class="javax.swing.JButton" name="btnInsertCard">
           <Properties>
             <Property name="text" type="java.lang.String" value="Insert Card"/>
@@ -870,8 +821,6 @@
             </Property>
           </Properties>
         </Component>
-=======
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="pnlButton123">

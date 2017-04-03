@@ -84,11 +84,8 @@ public class ValidateCard extends javax.swing.JFrame {
         jBtn13 = new javax.swing.JButton();
         jBtn14 = new javax.swing.JButton();
         jBtn15 = new javax.swing.JButton();
-<<<<<<< HEAD
         btnInsertCard = new javax.swing.JButton();
         lblCardHole = new javax.swing.JLabel();
-=======
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
         pnlButton123 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -100,10 +97,6 @@ public class ValidateCard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-<<<<<<< HEAD
-=======
-        setPreferredSize(new java.awt.Dimension(800, 735));
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
 
         pnlPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pnlPanel1.setPreferredSize(new java.awt.Dimension(800, 50));
@@ -191,11 +184,7 @@ public class ValidateCard extends javax.swing.JFrame {
                 .addComponent(lblAuthen1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblAuthen2)
-<<<<<<< HEAD
                 .addContainerGap(249, Short.MAX_VALUE))
-=======
-                .addContainerGap(255, Short.MAX_VALUE))
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
         );
 
         pnlSub22.add(pnlAuthenCard, "card3");
@@ -455,7 +444,6 @@ public class ValidateCard extends javax.swing.JFrame {
             }
         });
 
-<<<<<<< HEAD
         btnInsertCard.setText("Insert Card");
         btnInsertCard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -465,8 +453,6 @@ public class ValidateCard extends javax.swing.JFrame {
 
         lblCardHole.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-=======
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
         javax.swing.GroupLayout pnlPanel3Layout = new javax.swing.GroupLayout(pnlPanel3);
         pnlPanel3.setLayout(pnlPanel3Layout);
         pnlPanel3Layout.setHorizontalGroup(
@@ -474,10 +460,7 @@ public class ValidateCard extends javax.swing.JFrame {
             .addGroup(pnlPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
                     .addComponent(jBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                     .addGroup(pnlPanel3Layout.createSequentialGroup()
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -487,15 +470,6 @@ public class ValidateCard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlPanel3Layout.createSequentialGroup()
-<<<<<<< HEAD
-=======
-                                .addComponent(jBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlPanel3Layout.createSequentialGroup()
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -510,7 +484,6 @@ public class ValidateCard extends javax.swing.JFrame {
                                         .addComponent(jBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< HEAD
                                     .addComponent(jBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(pnlPanel3Layout.createSequentialGroup()
                                 .addComponent(jBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -524,17 +497,11 @@ public class ValidateCard extends javax.swing.JFrame {
                     .addComponent(btnInsertCard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblCardHole, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-=======
-                                    .addComponent(jBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addComponent(jBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(76, Short.MAX_VALUE))
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
         );
         pnlPanel3Layout.setVerticalGroup(
             pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPanel3Layout.createSequentialGroup()
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
                     .addGroup(pnlPanel3Layout.createSequentialGroup()
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPanel3Layout.createSequentialGroup()
@@ -545,30 +512,17 @@ public class ValidateCard extends javax.swing.JFrame {
                                 .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(12, 12, 12)
                         .addComponent(btnInsertCard))
-=======
-                    .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                     .addGroup(pnlPanel3Layout.createSequentialGroup()
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< HEAD
                         .addGap(8, 8, 8)
-=======
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< HEAD
                         .addGap(7, 7, 7)
-=======
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -713,20 +667,12 @@ public class ValidateCard extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(pnlPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
                                 .addGap(146, 146, 146)
-=======
-                                .addGap(143, 143, 143)
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                                 .addComponent(pnlButton456, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(201, 201, 201)
                         .addComponent(pnlButton123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-=======
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
                 .addComponent(pnlPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnlPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -823,13 +769,10 @@ public class ValidateCard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
-<<<<<<< HEAD
     private void btnInsertCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertCardActionPerformed
         
     }//GEN-LAST:event_btnInsertCardActionPerformed
 
-=======
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
     /**
      * @param args the command line arguments
      */
@@ -868,10 +811,7 @@ public class ValidateCard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
     private javax.swing.JButton btnInsertCard;
-=======
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
     private javax.swing.JButton jBtn1;
     private javax.swing.JButton jBtn10;
     private javax.swing.JButton jBtn11;
@@ -898,10 +838,7 @@ public class ValidateCard extends javax.swing.JFrame {
     private javax.swing.JLabel lblAuthen1;
     private javax.swing.JLabel lblAuthen2;
     private javax.swing.JLabel lblBankName;
-<<<<<<< HEAD
     private javax.swing.JLabel lblCardHole;
-=======
->>>>>>> acf0e3267d851f3e4de6d24aebaa5bce97662785
     private javax.swing.JLabel lblError1;
     private javax.swing.JLabel lblError2;
     private javax.swing.JLabel lblPIN;
