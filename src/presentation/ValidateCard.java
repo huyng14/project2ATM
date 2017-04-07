@@ -5,8 +5,14 @@
  */
 package presentation;
 
+import DTO.CardDTO;
+import bill.CardServices;
+import dao.CardDAOImpl;
+import entity.Card;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 /**
@@ -22,22 +28,17 @@ public class ValidateCard extends javax.swing.JFrame {
     
     public ValidateCard(){
         initComponents();
-        timer = new Timer(3000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                pnlSub22.removeAll();
-                pnlSub22.add(pnlPIN);
-                pnlSub22.repaint();
-                pnlSub22.validate();
-            }
-        });
-        timer.setRepeats(false);
-        timer.start();
-//        pnlSub22.removeAll();
-//        pnlSub22.add(pnlPIN);
-//        pnlSub22.repaint();
-//        pnlSub22.validate();
-        
+//        timer = new Timer(3000, new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                pnlSub22.removeAll();
+//                pnlSub22.add(pnlPIN);
+//                pnlSub22.repaint();
+//                pnlSub22.validate();
+//            }
+//        });
+//        timer.setRepeats(false);
+//        timer.start();
     }
 
     /**
@@ -164,7 +165,7 @@ public class ValidateCard extends javax.swing.JFrame {
         lblAuthen1.setText("Đang trong quá trình xác minh thẻ....");
 
         lblAuthen2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        lblAuthen2.setText("Quý khác chờ đợi trong giây lát !");
+        lblAuthen2.setText("Quý khách chờ đợi trong giây lát !");
 
         javax.swing.GroupLayout pnlAuthenCardLayout = new javax.swing.GroupLayout(pnlAuthenCard);
         pnlAuthenCard.setLayout(pnlAuthenCardLayout);
@@ -490,8 +491,7 @@ public class ValidateCard extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))))
+                                .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnInsertCard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -770,7 +770,22 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void btnInsertCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertCardActionPerformed
-        
+        String maThe= JOptionPane.showInputDialog("Nhập mã thẻ");
+        CardDTO card= CardServices.getByCardNo(maThe);
+        if(card == null){
+//            System.out.println("The khong hop le");
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlError);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+        }
+        else 
+        {
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlPIN);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+        }
     }//GEN-LAST:event_btnInsertCardActionPerformed
 
     /**
