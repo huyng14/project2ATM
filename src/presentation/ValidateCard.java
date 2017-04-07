@@ -7,12 +7,14 @@ package presentation;
 
 import DTO.CardDTO;
 import bill.CardServices;
+import common.jPasswordFieldLimit;
 import dao.CardDAOImpl;
 import entity.Card;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.Timer;
 
 /**
@@ -20,7 +22,7 @@ import javax.swing.Timer;
  * @author HUY-PC
  */
 public class ValidateCard extends javax.swing.JFrame {
-
+    StringBuilder pass= new StringBuilder(6);
     /**
      * Creates new form ValidateCard
      */
@@ -39,6 +41,8 @@ public class ValidateCard extends javax.swing.JFrame {
 //        });
 //        timer.setRepeats(false);
 //        timer.start();
+        jPasswordField1.setDocument(new jPasswordFieldLimit(6));
+        
     }
 
     /**
@@ -65,9 +69,14 @@ public class ValidateCard extends javax.swing.JFrame {
         lblPIN = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         lblXacNhan = new javax.swing.JLabel();
-        pnlError = new javax.swing.JPanel();
+        pnlErrorCard = new javax.swing.JPanel();
         lblError1 = new javax.swing.JLabel();
         lblError2 = new javax.swing.JLabel();
+        pnlErrorStatus = new javax.swing.JPanel();
+        lblErrorStatus1 = new javax.swing.JLabel();
+        lblErrorStatus2 = new javax.swing.JLabel();
+        lblErrorStatus3 = new javax.swing.JLabel();
+        lblErrorStatus4 = new javax.swing.JLabel();
         pnlPanel4 = new javax.swing.JPanel();
         pnlPanel3 = new javax.swing.JPanel();
         jBtn1 = new javax.swing.JButton();
@@ -82,9 +91,9 @@ public class ValidateCard extends javax.swing.JFrame {
         jBtn10 = new javax.swing.JButton();
         jBtn11 = new javax.swing.JButton();
         jBtn12 = new javax.swing.JButton();
-        jBtn13 = new javax.swing.JButton();
-        jBtn14 = new javax.swing.JButton();
-        jBtn15 = new javax.swing.JButton();
+        jBtnCancel = new javax.swing.JButton();
+        jBtnClear = new javax.swing.JButton();
+        jBtnEnter = new javax.swing.JButton();
         btnInsertCard = new javax.swing.JButton();
         lblCardHole = new javax.swing.JLabel();
         pnlButton123 = new javax.swing.JPanel();
@@ -195,8 +204,9 @@ public class ValidateCard extends javax.swing.JFrame {
         lblPIN.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         lblPIN.setText("Nhập mã PIN");
 
+        jPasswordField1.setColumns(1);
         jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -242,20 +252,20 @@ public class ValidateCard extends javax.swing.JFrame {
         lblError2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         lblError2.setText("Quý khách vui lòng lấy lại thẻ");
 
-        javax.swing.GroupLayout pnlErrorLayout = new javax.swing.GroupLayout(pnlError);
-        pnlError.setLayout(pnlErrorLayout);
-        pnlErrorLayout.setHorizontalGroup(
-            pnlErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlErrorLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnlErrorCardLayout = new javax.swing.GroupLayout(pnlErrorCard);
+        pnlErrorCard.setLayout(pnlErrorCardLayout);
+        pnlErrorCardLayout.setHorizontalGroup(
+            pnlErrorCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlErrorCardLayout.createSequentialGroup()
                 .addGap(108, 108, 108)
-                .addGroup(pnlErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlErrorCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblError1)
                     .addComponent(lblError2))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
-        pnlErrorLayout.setVerticalGroup(
-            pnlErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlErrorLayout.createSequentialGroup()
+        pnlErrorCardLayout.setVerticalGroup(
+            pnlErrorCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlErrorCardLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(lblError1)
                 .addGap(18, 18, 18)
@@ -263,7 +273,55 @@ public class ValidateCard extends javax.swing.JFrame {
                 .addContainerGap(233, Short.MAX_VALUE))
         );
 
-        pnlSub22.add(pnlError, "card4");
+        pnlSub22.add(pnlErrorCard, "card4");
+
+        lblErrorStatus1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        lblErrorStatus1.setText("Thẻ của bạn đã bị khóa");
+
+        lblErrorStatus2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        lblErrorStatus2.setText("Nếu có thắc mắc xin quý khách vui lòng liên hệ với ngân hàng ");
+
+        lblErrorStatus3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        lblErrorStatus3.setText("theo số máy: ");
+
+        lblErrorStatus4.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        lblErrorStatus4.setText("04 3888 9999");
+
+        javax.swing.GroupLayout pnlErrorStatusLayout = new javax.swing.GroupLayout(pnlErrorStatus);
+        pnlErrorStatus.setLayout(pnlErrorStatusLayout);
+        pnlErrorStatusLayout.setHorizontalGroup(
+            pnlErrorStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlErrorStatusLayout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(pnlErrorStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlErrorStatusLayout.createSequentialGroup()
+                        .addComponent(lblErrorStatus3)
+                        .addGap(67, 67, 67)
+                        .addComponent(lblErrorStatus4)
+                        .addContainerGap())
+                    .addGroup(pnlErrorStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlErrorStatusLayout.createSequentialGroup()
+                            .addComponent(lblErrorStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(85, 85, 85))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlErrorStatusLayout.createSequentialGroup()
+                            .addComponent(lblErrorStatus2)
+                            .addContainerGap()))))
+        );
+        pnlErrorStatusLayout.setVerticalGroup(
+            pnlErrorStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlErrorStatusLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(lblErrorStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblErrorStatus2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlErrorStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblErrorStatus3)
+                    .addComponent(lblErrorStatus4))
+                .addContainerGap(225, Short.MAX_VALUE))
+        );
+
+        pnlSub22.add(pnlErrorStatus, "card3");
 
         javax.swing.GroupLayout pnlPanel2Layout = new javax.swing.GroupLayout(pnlPanel2);
         pnlPanel2.setLayout(pnlPanel2Layout);
@@ -415,33 +473,33 @@ public class ValidateCard extends javax.swing.JFrame {
             }
         });
 
-        jBtn13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBtn13.setText("CANCEL");
-        jBtn13.setBorder(null);
-        jBtn13.setPreferredSize(new java.awt.Dimension(80, 40));
-        jBtn13.addActionListener(new java.awt.event.ActionListener() {
+        jBtnCancel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBtnCancel.setText("CANCEL");
+        jBtnCancel.setBorder(null);
+        jBtnCancel.setPreferredSize(new java.awt.Dimension(80, 40));
+        jBtnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtn13ActionPerformed(evt);
+                jBtnCancelActionPerformed(evt);
             }
         });
 
-        jBtn14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBtn14.setText("CLEAR");
-        jBtn14.setBorder(null);
-        jBtn14.setPreferredSize(new java.awt.Dimension(80, 40));
-        jBtn14.addActionListener(new java.awt.event.ActionListener() {
+        jBtnClear.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBtnClear.setText("CLEAR");
+        jBtnClear.setBorder(null);
+        jBtnClear.setPreferredSize(new java.awt.Dimension(80, 40));
+        jBtnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtn14ActionPerformed(evt);
+                jBtnClearActionPerformed(evt);
             }
         });
 
-        jBtn15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBtn15.setText("ENTER");
-        jBtn15.setBorder(null);
-        jBtn15.setPreferredSize(new java.awt.Dimension(80, 40));
-        jBtn15.addActionListener(new java.awt.event.ActionListener() {
+        jBtnEnter.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBtnEnter.setText("ENTER");
+        jBtnEnter.setBorder(null);
+        jBtnEnter.setPreferredSize(new java.awt.Dimension(80, 40));
+        jBtnEnter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtn15ActionPerformed(evt);
+                jBtnEnterActionPerformed(evt);
             }
         });
 
@@ -480,18 +538,18 @@ public class ValidateCard extends javax.swing.JFrame {
                                     .addGroup(pnlPanel3Layout.createSequentialGroup()
                                         .addComponent(jBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jBtn15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jBtnEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(pnlPanel3Layout.createSequentialGroup()
                                         .addComponent(jBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jBtnClear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(pnlPanel3Layout.createSequentialGroup()
                                 .addComponent(jBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jBtnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnInsertCard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -509,7 +567,7 @@ public class ValidateCard extends javax.swing.JFrame {
                                 .addComponent(lblCardHole, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jBtnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(12, 12, 12)
                         .addComponent(btnInsertCard))
                     .addGroup(pnlPanel3Layout.createSequentialGroup()
@@ -521,13 +579,13 @@ public class ValidateCard extends javax.swing.JFrame {
                             .addComponent(jBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBtnClear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(7, 7, 7)
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtn15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jBtnEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -686,7 +744,10 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn1ActionPerformed
-        // TODO add your handling code here:
+        pass.append(jBtn1.getText());
+        jPasswordField1.setText(pass.toString());
+        System.out.println(jPasswordField1.getText());
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn1ActionPerformed
 
     private void jBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn2ActionPerformed
@@ -733,17 +794,18 @@ public class ValidateCard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtn12ActionPerformed
 
-    private void jBtn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn13ActionPerformed
+    private void jBtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtn13ActionPerformed
+    }//GEN-LAST:event_jBtnCancelActionPerformed
 
-    private void jBtn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn14ActionPerformed
+    private void jBtnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnClearActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtn14ActionPerformed
+    }//GEN-LAST:event_jBtnClearActionPerformed
 
-    private void jBtn15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBtn15ActionPerformed
+    private void jBtnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEnterActionPerformed
+        JOptionPane.showMessageDialog(null, jPasswordField1.getPassword()+ "\n"+jPasswordField1.getText());
+        
+    }//GEN-LAST:event_jBtnEnterActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -771,20 +833,29 @@ public class ValidateCard extends javax.swing.JFrame {
 
     private void btnInsertCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertCardActionPerformed
         String maThe= JOptionPane.showInputDialog("Nhập mã thẻ");
-        CardDTO card= CardServices.getByCardNo(maThe);
+        CardDTO card= CardServices.getByCardNo("123456789");
         if(card == null){
 //            System.out.println("The khong hop le");
             pnlSub22.removeAll();
-            pnlSub22.add(pnlError);
+            pnlSub22.add(pnlErrorCard);
             pnlSub22.repaint();
             pnlSub22.validate();
         }
         else 
         {
-            pnlSub22.removeAll();
-            pnlSub22.add(pnlPIN);
-            pnlSub22.repaint();
-            pnlSub22.validate();
+            if(card.getStatus()== "false"){
+                pnlSub22.removeAll();
+                pnlSub22.add(pnlErrorStatus);
+                pnlSub22.repaint();
+                pnlSub22.validate();
+            }
+            else{
+                pnlSub22.removeAll();
+                pnlSub22.add(pnlPIN);
+                pnlSub22.repaint();
+                pnlSub22.validate();
+                jPasswordField1.requestFocus();
+            }
         }
     }//GEN-LAST:event_btnInsertCardActionPerformed
 
@@ -831,9 +902,6 @@ public class ValidateCard extends javax.swing.JFrame {
     private javax.swing.JButton jBtn10;
     private javax.swing.JButton jBtn11;
     private javax.swing.JButton jBtn12;
-    private javax.swing.JButton jBtn13;
-    private javax.swing.JButton jBtn14;
-    private javax.swing.JButton jBtn15;
     private javax.swing.JButton jBtn2;
     private javax.swing.JButton jBtn3;
     private javax.swing.JButton jBtn4;
@@ -842,6 +910,9 @@ public class ValidateCard extends javax.swing.JFrame {
     private javax.swing.JButton jBtn7;
     private javax.swing.JButton jBtn8;
     private javax.swing.JButton jBtn9;
+    private javax.swing.JButton jBtnCancel;
+    private javax.swing.JButton jBtnClear;
+    private javax.swing.JButton jBtnEnter;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -856,6 +927,10 @@ public class ValidateCard extends javax.swing.JFrame {
     private javax.swing.JLabel lblCardHole;
     private javax.swing.JLabel lblError1;
     private javax.swing.JLabel lblError2;
+    private javax.swing.JLabel lblErrorStatus1;
+    private javax.swing.JLabel lblErrorStatus2;
+    private javax.swing.JLabel lblErrorStatus3;
+    private javax.swing.JLabel lblErrorStatus4;
     private javax.swing.JLabel lblPIN;
     private javax.swing.JLabel lblWelcom;
     private javax.swing.JLabel lblXacNhan;
@@ -863,7 +938,8 @@ public class ValidateCard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlAuthenCard;
     private javax.swing.JPanel pnlButton123;
     private javax.swing.JPanel pnlButton456;
-    private javax.swing.JPanel pnlError;
+    private javax.swing.JPanel pnlErrorCard;
+    private javax.swing.JPanel pnlErrorStatus;
     private javax.swing.JPanel pnlPIN;
     private javax.swing.JPanel pnlPanel1;
     private javax.swing.JPanel pnlPanel2;

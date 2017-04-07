@@ -340,8 +340,11 @@
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="jPasswordField1">
                   <Properties>
+                    <Property name="columns" type="int" value="1"/>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Text Cursor"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField1ActionPerformed"/>
@@ -357,7 +360,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="pnlError">
+            <Container class="javax.swing.JPanel" name="pnlErrorCard">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
                   <CardConstraints cardName="card4"/>
@@ -404,6 +407,91 @@
                       <Font name="Tahoma" size="15" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Qu&#xfd; kh&#xe1;ch vui l&#xf2;ng l&#x1ea5;y l&#x1ea1;i th&#x1ebb;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="pnlErrorStatus">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card3"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="17" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="lblErrorStatus3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                                  <Component id="lblErrorStatus4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="lblErrorStatus1" min="-2" pref="255" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="lblErrorStatus2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="lblErrorStatus1" min="-2" pref="29" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lblErrorStatus2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblErrorStatus3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblErrorStatus4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="225" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblErrorStatus1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="15" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Th&#x1ebb; c&#x1ee7;a b&#x1ea1;n &#x111;&#xe3; b&#x1ecb; kh&#xf3;a"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblErrorStatus2">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="15" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="N&#x1ebf;u c&#xf3; th&#x1eaf;c m&#x1eaf;c xin qu&#xfd; kh&#xe1;ch vui l&#xf2;ng li&#xea;n h&#x1ec7; v&#x1edb;i ng&#xe2;n h&#xe0;ng "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblErrorStatus3">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="15" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="theo s&#x1ed1; m&#xe1;y: "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblErrorStatus4">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="15" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="04 3888 9999"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -467,12 +555,12 @@
                                       <Group type="102" attributes="0">
                                           <Component id="jBtn6" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jBtn15" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jBtnEnter" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jBtn7" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jBtn14" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jBtnClear" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jBtn12" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -482,7 +570,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jBtn3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jBtn13" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnCancel" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -508,7 +596,7 @@
                               </Group>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jBtn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jBtn13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jBtnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -524,14 +612,14 @@
                               <Component id="jBtn4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jBtn14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jBtnClear" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBtn8" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn9" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jBtn6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jBtn15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jBtnEnter" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -752,7 +840,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn12ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBtn13">
+        <Component class="javax.swing.JButton" name="jBtnCancel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -766,10 +854,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn13ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnCancelActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBtn14">
+        <Component class="javax.swing.JButton" name="jBtnClear">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -783,10 +871,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn14ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnClearActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBtn15">
+        <Component class="javax.swing.JButton" name="jBtnEnter">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -800,7 +888,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn15ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnEnterActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnInsertCard">
