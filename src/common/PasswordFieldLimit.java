@@ -13,11 +13,11 @@ import javax.swing.text.PlainDocument;
  *
  * @author HUY-PC
  */
-public class jPasswordFieldLimit extends PlainDocument {
+public class PasswordFieldLimit extends PlainDocument {
 
     private int limit;
 
-    public jPasswordFieldLimit(int limit) {
+    public PasswordFieldLimit(int limit) {
         super();
         this.limit = limit;
     }

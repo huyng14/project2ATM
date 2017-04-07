@@ -7,14 +7,9 @@ package presentation;
 
 import DTO.CardDTO;
 import bill.CardServices;
-import common.jPasswordFieldLimit;
-import dao.CardDAOImpl;
-import entity.Card;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.List;
+import common.InputPIN;
+import common.PasswordFieldLimit;
 import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
 import javax.swing.Timer;
 
 /**
@@ -22,13 +17,14 @@ import javax.swing.Timer;
  * @author HUY-PC
  */
 public class ValidateCard extends javax.swing.JFrame {
-    StringBuilder pass= new StringBuilder(6);
+
+    private StringBuilder pass = new StringBuilder(6);
     /**
      * Creates new form ValidateCard
      */
     private Timer timer;
-    
-    public ValidateCard(){
+
+    public ValidateCard() {
         initComponents();
 //        timer = new Timer(3000, new ActionListener() {
 //            @Override
@@ -41,8 +37,8 @@ public class ValidateCard extends javax.swing.JFrame {
 //        });
 //        timer.setRepeats(false);
 //        timer.start();
-        jPasswordField1.setDocument(new jPasswordFieldLimit(6));
-        
+        jPasswordField1.setDocument(new PasswordFieldLimit(6));
+//        System.out.println(pass1[0]);
     }
 
     /**
@@ -88,7 +84,7 @@ public class ValidateCard extends javax.swing.JFrame {
         jBtn7 = new javax.swing.JButton();
         jBtn8 = new javax.swing.JButton();
         jBtn9 = new javax.swing.JButton();
-        jBtn10 = new javax.swing.JButton();
+        jBtn0 = new javax.swing.JButton();
         jBtn11 = new javax.swing.JButton();
         jBtn12 = new javax.swing.JButton();
         jBtnCancel = new javax.swing.JButton();
@@ -444,13 +440,13 @@ public class ValidateCard extends javax.swing.JFrame {
             }
         });
 
-        jBtn10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBtn10.setText("0");
-        jBtn10.setBorder(null);
-        jBtn10.setPreferredSize(new java.awt.Dimension(40, 40));
-        jBtn10.addActionListener(new java.awt.event.ActionListener() {
+        jBtn0.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBtn0.setText("0");
+        jBtn0.setBorder(null);
+        jBtn0.setPreferredSize(new java.awt.Dimension(40, 40));
+        jBtn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtn10ActionPerformed(evt);
+                jBtn0ActionPerformed(evt);
             }
         });
 
@@ -532,7 +528,7 @@ public class ValidateCard extends javax.swing.JFrame {
                                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBtn10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jBtn0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlPanel3Layout.createSequentialGroup()
@@ -590,7 +586,7 @@ public class ValidateCard extends javax.swing.JFrame {
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jBtn10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtn0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jBtn11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -744,47 +740,92 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn1ActionPerformed
-        pass.append(jBtn1.getText());
-        jPasswordField1.setText(pass.toString());
-        System.out.println(jPasswordField1.getText());
+        if (pass.length() < 6) {
+            pass.append(jBtn1.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
         jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn1ActionPerformed
 
     private void jBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn2ActionPerformed
-        // TODO add your handling code here:
+        if (pass.length() < 6) {
+            pass.append(jBtn2.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn2ActionPerformed
 
     private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
-        // TODO add your handling code here:
+        if (pass.length() < 6) {
+            pass.append(jBtn3.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn3ActionPerformed
 
     private void jBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn4ActionPerformed
-        // TODO add your handling code here:
+        if(pass.length()<6)
+        {
+            pass.append(jBtn4.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn4ActionPerformed
 
     private void jBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn5ActionPerformed
-        // TODO add your handling code here:
+        if(pass.length()<6)
+        {
+            pass.append(jBtn5.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn5ActionPerformed
 
     private void jBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn6ActionPerformed
-        // TODO add your handling code here:
+        if(pass.length()<6)
+        {
+            pass.append(jBtn6.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn6ActionPerformed
 
     private void jBtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn7ActionPerformed
-        // TODO add your handling code here:
+        if(pass.length()<6)
+        {
+            pass.append(jBtn7.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn7ActionPerformed
 
     private void jBtn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn8ActionPerformed
-        // TODO add your handling code here:
+        if(pass.length()<6)
+        {
+            pass.append(jBtn8.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn8ActionPerformed
 
     private void jBtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn9ActionPerformed
-        // TODO add your handling code here:
+        if(pass.length()<6)
+        {
+            pass.append(jBtn9.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn9ActionPerformed
 
-    private void jBtn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBtn10ActionPerformed
+    private void jBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn0ActionPerformed
+        jBtn0.setText("0");
+        if(pass.length()<6)
+        {
+            pass.append(jBtn0.getText());
+        }
+        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+        jPasswordField1.requestFocus();
+    }//GEN-LAST:event_jBtn0ActionPerformed
 
     private void jBtn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn11ActionPerformed
         // TODO add your handling code here:
@@ -799,12 +840,14 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnCancelActionPerformed
 
     private void jBtnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnClearActionPerformed
-        // TODO add your handling code here:
+        jPasswordField1.setText("");
+        pass.delete(0, pass.length());
+        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtnClearActionPerformed
 
     private void jBtnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEnterActionPerformed
-        JOptionPane.showMessageDialog(null, jPasswordField1.getPassword()+ "\n"+jPasswordField1.getText());
-        
+        JOptionPane.showMessageDialog(null, jPasswordField1.getPassword() + "\n" + jPasswordField1.getText());
+
     }//GEN-LAST:event_jBtnEnterActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -832,24 +875,21 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void btnInsertCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertCardActionPerformed
-        String maThe= JOptionPane.showInputDialog("Nhập mã thẻ");
-        CardDTO card= CardServices.getByCardNo("123456789");
-        if(card == null){
+        String maThe = JOptionPane.showInputDialog("Nhập mã thẻ");
+        CardDTO card = CardServices.getByCardNo("123456789");
+        if (card == null) {
 //            System.out.println("The khong hop le");
             pnlSub22.removeAll();
             pnlSub22.add(pnlErrorCard);
             pnlSub22.repaint();
             pnlSub22.validate();
-        }
-        else 
-        {
-            if(card.getStatus()== "false"){
+        } else {
+            if (card.getStatus() == "false") {
                 pnlSub22.removeAll();
                 pnlSub22.add(pnlErrorStatus);
                 pnlSub22.repaint();
                 pnlSub22.validate();
-            }
-            else{
+            } else {
                 pnlSub22.removeAll();
                 pnlSub22.add(pnlPIN);
                 pnlSub22.repaint();
@@ -898,8 +938,8 @@ public class ValidateCard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInsertCard;
+    private javax.swing.JButton jBtn0;
     private javax.swing.JButton jBtn1;
-    private javax.swing.JButton jBtn10;
     private javax.swing.JButton jBtn11;
     private javax.swing.JButton jBtn12;
     private javax.swing.JButton jBtn2;
@@ -948,6 +988,5 @@ public class ValidateCard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlSub21;
     private javax.swing.JPanel pnlSub22;
     // End of variables declaration//GEN-END:variables
-
 
 }

@@ -548,7 +548,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jBtn5" min="-2" max="-2" attributes="0"/>
                                       <Component id="jBtn9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jBtn10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jBtn0" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -627,7 +627,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jBtn12" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jBtn10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtn0" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBtn11" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -790,7 +790,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn9ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBtn10">
+        <Component class="javax.swing.JButton" name="jBtn0">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -804,7 +804,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn10ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtn0ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBtn11">
