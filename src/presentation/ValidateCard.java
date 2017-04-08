@@ -5,10 +5,10 @@
  */
 package presentation;
 
-import DTO.CardDTO;
 import bill.CardServices;
 import common.InputPIN;
 import common.PasswordFieldLimit;
+import entity.Card;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
@@ -19,6 +19,7 @@ import javax.swing.Timer;
 public class ValidateCard extends javax.swing.JFrame {
 
     private StringBuilder pass = new StringBuilder(6);
+    private Card card= null;
     /**
      * Creates new form ValidateCard
      */
@@ -38,7 +39,6 @@ public class ValidateCard extends javax.swing.JFrame {
 //        timer.setRepeats(false);
 //        timer.start();
         jPasswordField1.setDocument(new PasswordFieldLimit(6));
-//        System.out.println(pass1[0]);
     }
 
     /**
@@ -201,6 +201,7 @@ public class ValidateCard extends javax.swing.JFrame {
         lblPIN.setText("Nhập mã PIN");
 
         jPasswordField1.setColumns(1);
+        jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPasswordField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -846,8 +847,33 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnClearActionPerformed
 
     private void jBtnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEnterActionPerformed
-        JOptionPane.showMessageDialog(null, jPasswordField1.getPassword() + "\n" + jPasswordField1.getText());
-
+//        JOptionPane.showMessageDialog(null, jPasswordField1.getPassword() + "\n" + jPasswordField1.getText());
+        if(card.getPin().equals(jPasswordField1.getText()))
+        {
+            JOptionPane.showMessageDialog(null, "Xin chào mừng bạn đến với ngân hàng");
+            card.setAttempt(0);
+//            setVisible(false);
+        }
+        else
+        {
+            card.setAttempt(card.getAttempt()+1);
+            System.out.println("So lan Attemp: "+card.getAttempt());
+        }
+        if(card.getAttempt()==4)
+        {
+            card.setStatus("false");
+            card.setAttempt(0);
+            if(CardServices.updateCard(card)){
+                System.out.println("Da update vao bang Card");
+            }
+            else{
+                System.out.println("Khong update vao bang Card duoc");
+            }
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlErrorStatus);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+        }
     }//GEN-LAST:event_jBtnEnterActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -876,14 +902,15 @@ public class ValidateCard extends javax.swing.JFrame {
 
     private void btnInsertCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertCardActionPerformed
         String maThe = JOptionPane.showInputDialog("Nhập mã thẻ");
-        CardDTO card = CardServices.getByCardNo("123456789");
+        card = CardServices.getByCardNo("123456789");
         if (card == null) {
-//            System.out.println("The khong hop le");
+            System.out.println("The khong hop le");
             pnlSub22.removeAll();
             pnlSub22.add(pnlErrorCard);
             pnlSub22.repaint();
             pnlSub22.validate();
         } else {
+            System.out.println("card status = "+card.getStatus());
             if (card.getStatus() == "false") {
                 pnlSub22.removeAll();
                 pnlSub22.add(pnlErrorStatus);

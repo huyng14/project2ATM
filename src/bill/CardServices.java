@@ -21,7 +21,11 @@ public class CardServices {
         return objCard.getAll();
     }
     
-    public static CardDTO getByCardNo(String cardNo){
+    public static Card getByCardNo(String cardNo){
         return objCard.getByCardNo(cardNo);
+    }
+    
+    public static boolean updateCard(Card card){
+        return objCard.updateCard(card);
     }
 }

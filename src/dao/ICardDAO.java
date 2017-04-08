@@ -16,5 +16,7 @@ import java.util.List;
 public interface ICardDAO {
     public List<Card> getAll();
     
-    public CardDTO getByCardNo(String cardNo);
+    public Card getByCardNo(String cardNo);
+    
+    public boolean updateCard(Card card);
 }

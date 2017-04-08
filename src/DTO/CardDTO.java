@@ -5,12 +5,15 @@
  */
 package DTO;
 
+import entity.Account;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -36,6 +39,9 @@ public class CardDTO implements Serializable{
     private Date expiredDate;
     @Column(name = "Attempt")
     private Integer attempt;
+    @JoinColumn(name = "AccountID", referencedColumnName = "AccountID")
+    @ManyToOne
+    private Account accountID;
     
     public CardDTO(){
         

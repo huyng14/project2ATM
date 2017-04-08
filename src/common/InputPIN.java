@@ -16,7 +16,6 @@ public class InputPIN {
  
     public static void nhapMaPIN(String str, JPasswordField pass){
         if(str.length()<=6){
-            System.out.println(str);
             pass.setText(str);
         }
         else{
