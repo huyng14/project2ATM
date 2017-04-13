@@ -20,24 +20,11 @@ public class ValidateCard extends javax.swing.JFrame {
 
     private StringBuilder pass = new StringBuilder(6);
     private Card card= null;
-    /**
-     * Creates new form ValidateCard
-     */
-    private Timer timer;
+    
+    private String namePnl="pnlAuthenCard";
 
     public ValidateCard() {
         initComponents();
-//        timer = new Timer(3000, new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent ae) {
-//                pnlSub22.removeAll();
-//                pnlSub22.add(pnlPIN);
-//                pnlSub22.repaint();
-//                pnlSub22.validate();
-//            }
-//        });
-//        timer.setRepeats(false);
-//        timer.start();
         jPasswordField1.setDocument(new PasswordFieldLimit(6));
     }
 
@@ -741,91 +728,129 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn1ActionPerformed
-        if (pass.length() < 6) {
+        if(namePnl.equals("pnlPIN"))
+        {
+            if (pass.length() < 6) {
             pass.append(jBtn1.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn1ActionPerformed
 
     private void jBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn2ActionPerformed
-        if (pass.length() < 6) {
+        if(namePnl.equals("pnlPIN"))
+        {
+            if (pass.length() < 6) {
             pass.append(jBtn2.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn2ActionPerformed
 
     private void jBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn3ActionPerformed
-        if (pass.length() < 6) {
-            pass.append(jBtn3.getText());
+        if(namePnl.equals("pnlPIN"))
+        {
+            if (pass.length() < 6) {
+                pass.append(jBtn3.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn3ActionPerformed
 
     private void jBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn4ActionPerformed
-        if(pass.length()<6)
+        if(namePnl.equals("pnlPIN"))
         {
-            pass.append(jBtn4.getText());
+            if(pass.length()<6)
+            {
+                pass.append(jBtn4.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn4ActionPerformed
 
     private void jBtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn5ActionPerformed
-        if(pass.length()<6)
+        if(namePnl.equals("pnlPIN"))
         {
-            pass.append(jBtn5.getText());
+            if(pass.length()<6)
+            {
+                pass.append(jBtn5.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn5ActionPerformed
 
     private void jBtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn6ActionPerformed
-        if(pass.length()<6)
+        if(namePnl.equals("pnlPIN"))
         {
-            pass.append(jBtn6.getText());
+            if(pass.length()<6)
+            {
+                pass.append(jBtn6.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn6ActionPerformed
 
     private void jBtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn7ActionPerformed
-        if(pass.length()<6)
+        if(namePnl.equals("pnlPIN"))
         {
-            pass.append(jBtn7.getText());
+            if(pass.length()<6)
+            {
+                pass.append(jBtn7.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn7ActionPerformed
 
     private void jBtn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn8ActionPerformed
-        if(pass.length()<6)
+        if(namePnl.equals("pnlPIN"))
         {
-            pass.append(jBtn8.getText());
+            if(pass.length()<6)
+            {
+                pass.append(jBtn8.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn8ActionPerformed
 
     private void jBtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn9ActionPerformed
-        if(pass.length()<6)
+        if(namePnl.equals("pnlPIN"))
         {
-            pass.append(jBtn9.getText());
+            if(pass.length()<6)
+            {
+                pass.append(jBtn9.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
+        
     }//GEN-LAST:event_jBtn9ActionPerformed
 
     private void jBtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn0ActionPerformed
-        jBtn0.setText("0");
-        if(pass.length()<6)
+        if(namePnl.equals("pnlPIN"))
         {
-            pass.append(jBtn0.getText());
+            jBtn0.setText("0");
+            if(pass.length()<6)
+            {
+                pass.append(jBtn0.getText());
+            }
+            InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
+            jPasswordField1.requestFocus();
         }
-        InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
-        jPasswordField1.requestFocus();
     }//GEN-LAST:event_jBtn0ActionPerformed
 
     private void jBtn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn11ActionPerformed
@@ -841,38 +866,52 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnCancelActionPerformed
 
     private void jBtnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnClearActionPerformed
-        jPasswordField1.setText("");
-        pass.delete(0, pass.length());
-        jPasswordField1.requestFocus();
+        if(namePnl.equals("pnlPIN"))
+        {
+            jPasswordField1.setText("");
+            pass.delete(0, pass.length());
+            jPasswordField1.requestFocus();
+        }
+        
     }//GEN-LAST:event_jBtnClearActionPerformed
 
     private void jBtnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEnterActionPerformed
 //        JOptionPane.showMessageDialog(null, jPasswordField1.getPassword() + "\n" + jPasswordField1.getText());
-        if(card.getPin().equals(jPasswordField1.getText()))
+        if(namePnl.equals("pnlPIN"))
         {
-            JOptionPane.showMessageDialog(null, "Xin chào mừng bạn đến với ngân hàng");
-            card.setAttempt(0);
-//            setVisible(false);
-        }
-        else
-        {
-            card.setAttempt(card.getAttempt()+1);
-            System.out.println("So lan Attemp: "+card.getAttempt());
-        }
-        if(card.getAttempt()==4)
-        {
-            card.setStatus("false");
-            card.setAttempt(0);
-            if(CardServices.updateCard(card)){
-                System.out.println("Da update vao bang Card");
+            if(card.getPin().equals(jPasswordField1.getText()))
+            {
+                JOptionPane.showMessageDialog(null, "Xin chào mừng bạn đến với ngân hàng");
+                card.setAttempt(0);
+    //            setVisible(false);
+    //            Withdraw obj= new Withdraw(card.getAccountID());
+    //            obj.setVisible(true);
             }
-            else{
-                System.out.println("Khong update vao bang Card duoc");
+            else
+            {
+                card.setAttempt(card.getAttempt()+1);
+                System.out.println("So lan Attemp: "+card.getAttempt());
             }
-            pnlSub22.removeAll();
-            pnlSub22.add(pnlErrorStatus);
-            pnlSub22.repaint();
-            pnlSub22.validate();
+            if(card.getAttempt()==4)
+            {
+                card.setStatus("false");
+                card.setAttempt(0);
+                if(CardServices.updateCard(card)){
+                    System.out.println("Da update vao bang Card");
+                }
+                else{
+                    System.out.println("Khong update vao bang Card duoc");
+                }
+                pnlSub22.removeAll();
+
+                pnlSub22.add(pnlErrorStatus);
+                pnlSub22.repaint();
+                pnlSub22.validate();
+                jPasswordField1.setText("");
+            }
+            jPasswordField1.setText("");
+            pass.delete(0, pass.length());
+            jPasswordField1.requestFocus();
         }
     }//GEN-LAST:event_jBtnEnterActionPerformed
 
@@ -901,27 +940,34 @@ public class ValidateCard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void btnInsertCardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertCardActionPerformed
-        String maThe = JOptionPane.showInputDialog("Nhập mã thẻ");
-        card = CardServices.getByCardNo("123456789");
-        if (card == null) {
-            System.out.println("The khong hop le");
-            pnlSub22.removeAll();
-            pnlSub22.add(pnlErrorCard);
-            pnlSub22.repaint();
-            pnlSub22.validate();
-        } else {
-            System.out.println("card status = "+card.getStatus());
-            if (card.getStatus() == "false") {
+        if(namePnl.equals("pnlAuthenCard"))
+        {
+            String maThe = JOptionPane.showInputDialog("Nhập mã thẻ");
+            card = CardServices.getByCardNo(maThe);
+            if (card == null) {
+                System.out.println("The khong hop le");
                 pnlSub22.removeAll();
-                pnlSub22.add(pnlErrorStatus);
+                pnlSub22.add(pnlErrorCard);
                 pnlSub22.repaint();
                 pnlSub22.validate();
+                
+                namePnl="pnlAuthenCard";
             } else {
-                pnlSub22.removeAll();
-                pnlSub22.add(pnlPIN);
-                pnlSub22.repaint();
-                pnlSub22.validate();
-                jPasswordField1.requestFocus();
+                System.out.println("card status = "+card.getStatus());
+                if (card.getStatus() == "false") {
+                    pnlSub22.removeAll();
+                    pnlSub22.add(pnlErrorStatus);
+                    pnlSub22.repaint();
+                    pnlSub22.validate();
+                } else {
+                    pnlSub22.removeAll();
+                    pnlSub22.add(pnlPIN);
+                    pnlSub22.repaint();
+                    pnlSub22.validate();
+                    jPasswordField1.requestFocus();
+
+                    namePnl="pnlPIN";   //Đánh dấu panel;
+                }
             }
         }
     }//GEN-LAST:event_btnInsertCardActionPerformed

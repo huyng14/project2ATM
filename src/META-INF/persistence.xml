@@ -13,6 +13,7 @@
     
     <!--thêm bảng DTO-->
     <class>DTO.CardDTO</class>
+    <class>DTO.LogLogTypeDTO</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=db_ATM"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>

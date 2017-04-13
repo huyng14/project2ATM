@@ -6,11 +6,16 @@
 package DTO;
 
 import entity.Account;
+import entity.Atm;
+import entity.Card;
+import entity.LogType;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -28,74 +33,84 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class CardDTO implements Serializable{
     @Id
     @Basic(optional = false)
-    @Column(name = "CardNo")
-    private String cardNo;
-    @Column(name = "Status")
-    private String status;
-    @Column(name = "PIN")
-    private String pin;
-    @Column(name = "ExpiredDate")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "LogID")
+    private Integer logID;
+    @Column(name = "LogDate")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date expiredDate;
-    @Column(name = "Attempt")
-    private Integer attempt;
-    @JoinColumn(name = "AccountID", referencedColumnName = "AccountID")
+    private Date logDate;
+    @Column(name = "Amount")
+    private Long amount;
+    @JoinColumn(name = "ATMID", referencedColumnName = "ATMID")
     @ManyToOne
-    private Account accountID;
+    private Atm atmid;
+    @JoinColumn(name = "CardNo", referencedColumnName = "CardNo")
+    @ManyToOne
+    private Card cardNo;
+    @JoinColumn(name = "LogTypeID", referencedColumnName = "LogTypeID")
+    @ManyToOne
+    private LogType logTypeID;
+    
+    
     
     public CardDTO(){
         
     }
 
-    public CardDTO(String cardNo, String status, String pin, Date expiredDate, Integer attempt) {
+    public CardDTO(Integer logID, Date logDate, Long amount, Atm atmid, Card cardNo, LogType logTypeID) {
+        this.logID = logID;
+        this.logDate = logDate;
+        this.amount = amount;
+        this.atmid = atmid;
         this.cardNo = cardNo;
-        this.status = status;
-        this.pin = pin;
-        this.expiredDate = expiredDate;
-        this.attempt = attempt;
+        this.logTypeID = logTypeID;
     }
 
-    public String getCardNo() {
+    public Integer getLogID() {
+        return logID;
+    }
+
+    public void setLogID(Integer logID) {
+        this.logID = logID;
+    }
+
+    public Date getLogDate() {
+        return logDate;
+    }
+
+    public void setLogDate(Date logDate) {
+        this.logDate = logDate;
+    }
+
+    public Long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
+
+    public Atm getAtmid() {
+        return atmid;
+    }
+
+    public void setAtmid(Atm atmid) {
+        this.atmid = atmid;
+    }
+
+    public Card getCardNo() {
         return cardNo;
     }
 
-    public void setCardNo(String cardNo) {
+    public void setCardNo(Card cardNo) {
         this.cardNo = cardNo;
     }
 
-    
-
-    public String getStatus() {
-        return status;
+    public LogType getLogTypeID() {
+        return logTypeID;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setLogTypeID(LogType logTypeID) {
+        this.logTypeID = logTypeID;
     }
-
-    public String getPin() {
-        return pin;
-    }
-
-    public void setPin(String pin) {
-        this.pin = pin;
-    }
-
-    public Date getExpiredDate() {
-        return expiredDate;
-    }
-
-    public void setExpiredDate(Date expiredDate) {
-        this.expiredDate = expiredDate;
-    }
-
-    public Integer getAttempt() {
-        return attempt;
-    }
-
-    public void setAttempt(Integer attempt) {
-        this.attempt = attempt;
-    }
-    
-    
 }
