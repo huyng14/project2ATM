@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bill;
+package bll;
 
 import DTO.LogLogTypeDTO;
 import dao.LogDAOImpl;

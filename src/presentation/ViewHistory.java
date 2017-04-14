@@ -7,7 +7,7 @@ package presentation;
 
 
 import DTO.LogLogTypeDTO;
-import bill.LogServices;
+import bll.LogServices;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;

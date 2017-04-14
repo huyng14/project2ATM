@@ -5,7 +5,7 @@
  */
 package presentation;
 
-import bill.CardServices;
+import bll.CardServices;
 import common.InputPIN;
 import common.PasswordFieldLimit;
 import entity.Card;
@@ -731,7 +731,7 @@ public class ValidateCard extends javax.swing.JFrame {
         if(namePnl.equals("pnlPIN"))
         {
             if (pass.length() < 6) {
-            pass.append(jBtn1.getText());
+                pass.append(jBtn1.getText());
             }
             InputPIN.nhapMaPIN(pass.toString(), jPasswordField1);
             jPasswordField1.requestFocus();

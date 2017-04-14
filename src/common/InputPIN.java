@@ -6,8 +6,6 @@
 package common;
 
 import javax.swing.JPasswordField;
-import sun.security.util.Password;
-
 /**
  *
  * @author HUY-PC
