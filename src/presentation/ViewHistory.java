@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.table.DefaultTableModel;
 
@@ -99,9 +100,9 @@ public class ViewHistory extends javax.swing.JFrame {
         jBtn10 = new javax.swing.JButton();
         jBtn11 = new javax.swing.JButton();
         jBtn12 = new javax.swing.JButton();
-        jBtn13 = new javax.swing.JButton();
-        jBtn14 = new javax.swing.JButton();
-        jBtn15 = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
+        btnEnter = new javax.swing.JButton();
         btnInsertCard = new javax.swing.JButton();
         lblCardHole = new javax.swing.JLabel();
         pnlButton123 = new javax.swing.JPanel();
@@ -467,33 +468,33 @@ public class ViewHistory extends javax.swing.JFrame {
             }
         });
 
-        jBtn13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBtn13.setText("CANCEL");
-        jBtn13.setBorder(null);
-        jBtn13.setPreferredSize(new java.awt.Dimension(80, 40));
-        jBtn13.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnCancel.setText("CANCEL");
+        btnCancel.setBorder(null);
+        btnCancel.setPreferredSize(new java.awt.Dimension(80, 40));
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtn13ActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
 
-        jBtn14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBtn14.setText("CLEAR");
-        jBtn14.setBorder(null);
-        jBtn14.setPreferredSize(new java.awt.Dimension(80, 40));
-        jBtn14.addActionListener(new java.awt.event.ActionListener() {
+        btnClear.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnClear.setText("CLEAR");
+        btnClear.setBorder(null);
+        btnClear.setPreferredSize(new java.awt.Dimension(80, 40));
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtn14ActionPerformed(evt);
+                btnClearActionPerformed(evt);
             }
         });
 
-        jBtn15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBtn15.setText("ENTER");
-        jBtn15.setBorder(null);
-        jBtn15.setPreferredSize(new java.awt.Dimension(80, 40));
-        jBtn15.addActionListener(new java.awt.event.ActionListener() {
+        btnEnter.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnEnter.setText("ENTER");
+        btnEnter.setBorder(null);
+        btnEnter.setPreferredSize(new java.awt.Dimension(80, 40));
+        btnEnter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtn15ActionPerformed(evt);
+                btnEnterActionPerformed(evt);
             }
         });
 
@@ -532,18 +533,18 @@ public class ViewHistory extends javax.swing.JFrame {
                                     .addGroup(pnlPanel3Layout.createSequentialGroup()
                                         .addComponent(jBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jBtn15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(btnEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(pnlPanel3Layout.createSequentialGroup()
                                         .addComponent(jBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(pnlPanel3Layout.createSequentialGroup()
                                 .addComponent(jBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnInsertCard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -561,7 +562,7 @@ public class ViewHistory extends javax.swing.JFrame {
                                 .addComponent(lblCardHole, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jBtn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(12, 12, 12)
                         .addComponent(btnInsertCard))
                     .addGroup(pnlPanel3Layout.createSequentialGroup()
@@ -573,13 +574,13 @@ public class ViewHistory extends javax.swing.JFrame {
                             .addComponent(jBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(7, 7, 7)
                         .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBtn15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBtn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -781,23 +782,38 @@ public class ViewHistory extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtn12ActionPerformed
 
-    private void jBtn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBtn13ActionPerformed
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        JOptionPane.showMessageDialog(null, "Tro lai man hinh chinh");
+        pnlSub22.removeAll();
+        pnlSub22.add(pnlSelectTime);
+        pnlSub22.repaint();
+        pnlSub22.validate();
+        markPnl="pnlSelectTime";
+    }//GEN-LAST:event_btnCancelActionPerformed
 
-    private void jBtn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn14ActionPerformed
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtn14ActionPerformed
+    }//GEN-LAST:event_btnClearActionPerformed
 
-    private void jBtn15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn15ActionPerformed
+    private void btnEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBtn15ActionPerformed
+    }//GEN-LAST:event_btnEnterActionPerformed
 
     private void btnNum1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum1ActionPerformed
         //1 ngay truoc
         if(markPnl.equals("pnlSelectTime"))
         {
-            String date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1) +"/"+ (cl.getTime().getDate()-1)+ "'";
+            int checkDate=(cl.getTime().getDate()-1);
+            System.out.println("Date of year: "+checkDate);
+            String date;
+            if(checkDate<=0)
+            {
+                checkDate= 30+checkDate;
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1) +"/"+ checkDate+ "'";
+            }
+            else {
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1) +"/"+ (cl.getTime().getDate()-1)+ "'";
+            }
             System.out.println(date);
             List<LogLogTypeDTO> log= LogServices.getLogByCardNo(date, cardNo);
             for (LogLogTypeDTO l : log) {
@@ -810,41 +826,148 @@ public class ViewHistory extends javax.swing.JFrame {
             pnlSub22.add(pnlTable);
             pnlSub22.repaint();
             pnlSub22.validate();
+            markPnl="";
         }
     }//GEN-LAST:event_btnNum1ActionPerformed
 
     private void btnNum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum2ActionPerformed
         if(markPnl.equals("pnlSelectTime"))
         {
-            
+            int checkDate=(cl.getTime().getDate()-7);
+            System.out.println("Date of year: "+checkDate);
+            String date;
+            if(checkDate<=0)
+            {
+                checkDate= 30+checkDate;
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1) +"/"+ checkDate+ "'";
+            }
+            else {
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1) +"/"+ (cl.getTime().getDate()-7)+ "'";
+            }
+            System.out.println(date);
+            List<LogLogTypeDTO> log= LogServices.getLogByCardNo(date, cardNo);
+            for (LogLogTypeDTO l : log) {
+                System.out.println(l);
+                SimpleDateFormat formatDate= new SimpleDateFormat("dd/MM/yyyy");
+                Object[] dt= {l.getAddress(), l.getDescription(), formatDate.format(l.getLogDate()), l.getAmount()};
+                tableHistoryModel.addRow(dt);
+            }
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlTable);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+            markPnl="";
         }
     }//GEN-LAST:event_btnNum2ActionPerformed
 
     private void btnNum3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum3ActionPerformed
         if(markPnl.equals("pnlSelectTime"))
         {
+            int month=(cl.getTime().getMonth()+1-1);
+            System.out.println("Month of year: "+month);
+            String date;
+            if(month<=0)
+            {
+                month= 12+month;
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ month +"/"+ (cl.getTime().getDate()-1)+ "'";
+            }
+            else {
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1-1) +"/"+ (cl.getTime().getDate()-1)+ "'";
+            }
             
+            System.out.println(date);
+            List<LogLogTypeDTO> log= LogServices.getLogByCardNo(date, cardNo);
+            for (LogLogTypeDTO l : log) {
+                System.out.println(l);
+                SimpleDateFormat formatDate= new SimpleDateFormat("dd/MM/yyyy");
+                Object[] dt= {l.getAddress(), l.getDescription(), formatDate.format(l.getLogDate()), l.getAmount()};
+                tableHistoryModel.addRow(dt);
+            }
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlTable);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+            markPnl="";
         }
     }//GEN-LAST:event_btnNum3ActionPerformed
 
     private void btnNum4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum4ActionPerformed
         if(markPnl.equals("pnlSelectTime"))
         {
-            
+            int month=(cl.getTime().getMonth()+1-3);
+            System.out.println("Month of year: "+month);
+            String date;
+            if(month<=0)
+            {
+                month= 12+month;
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ month +"/"+ (cl.getTime().getDate()-1)+ "'";
+            }
+            else {
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1-3) +"/"+ (cl.getTime().getDate()-1)+ "'";
+            }
+            System.out.println(date);
+            List<LogLogTypeDTO> log= LogServices.getLogByCardNo(date, cardNo);
+            for (LogLogTypeDTO l : log) {
+                System.out.println(l);
+                SimpleDateFormat formatDate= new SimpleDateFormat("dd/MM/yyyy");
+                Object[] dt= {l.getAddress(), l.getDescription(), formatDate.format(l.getLogDate()), l.getAmount()};
+                tableHistoryModel.addRow(dt);
+            }
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlTable);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+            markPnl="";
         }
     }//GEN-LAST:event_btnNum4ActionPerformed
 
     private void btnNum5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum5ActionPerformed
         if(markPnl.equals("pnlSelectTime"))
         {
-            
+            int month=(cl.getTime().getMonth()+1-6);
+            System.out.println("Month of year: "+month);
+            String date;
+            if(month<=0)
+            {
+                month= 12+month;
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ month +"/"+ (cl.getTime().getDate()-1)+ "'";
+            }
+            else {
+                date= "'"+(cl.getTime().getYear()+1900)+"/"+ (cl.getTime().getMonth()+1-6) +"/"+ (cl.getTime().getDate()-1)+ "'";
+            }
+            System.out.println(date);
+            List<LogLogTypeDTO> log= LogServices.getLogByCardNo(date, cardNo);
+            for (LogLogTypeDTO l : log) {
+                System.out.println(l);
+                SimpleDateFormat formatDate= new SimpleDateFormat("dd/MM/yyyy");
+                Object[] dt= {l.getAddress(), l.getDescription(), formatDate.format(l.getLogDate()), l.getAmount()};
+                tableHistoryModel.addRow(dt);
+            }
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlTable);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+            markPnl="";
         }
     }//GEN-LAST:event_btnNum5ActionPerformed
 
     private void btnNum6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNum6ActionPerformed
         if(markPnl.equals("pnlSelectTime"))
         {
-            
+            String date= "'"+(cl.getTime().getYear()+1900-1)+"/"+ (cl.getTime().getMonth()+1) +"/"+ (cl.getTime().getDate()-1)+ "'";
+            System.out.println(date);
+            List<LogLogTypeDTO> log= LogServices.getLogByCardNo(date, cardNo);
+            for (LogLogTypeDTO l : log) {
+                System.out.println(l);
+                SimpleDateFormat formatDate= new SimpleDateFormat("dd/MM/yyyy");
+                Object[] dt= {l.getAddress(), l.getDescription(), formatDate.format(l.getLogDate()), l.getAmount()};
+                tableHistoryModel.addRow(dt);
+            }
+            pnlSub22.removeAll();
+            pnlSub22.add(pnlTable);
+            pnlSub22.repaint();
+            pnlSub22.validate();
+            markPnl="";
         }
     }//GEN-LAST:event_btnNum6ActionPerformed
 
@@ -892,6 +1015,9 @@ public class ViewHistory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnEnter;
     private javax.swing.JButton btnInsertCard;
     private javax.swing.JButton btnNum1;
     private javax.swing.JButton btnNum2;
@@ -903,9 +1029,6 @@ public class ViewHistory extends javax.swing.JFrame {
     private javax.swing.JButton jBtn10;
     private javax.swing.JButton jBtn11;
     private javax.swing.JButton jBtn12;
-    private javax.swing.JButton jBtn13;
-    private javax.swing.JButton jBtn14;
-    private javax.swing.JButton jBtn15;
     private javax.swing.JButton jBtn2;
     private javax.swing.JButton jBtn3;
     private javax.swing.JButton jBtn4;
